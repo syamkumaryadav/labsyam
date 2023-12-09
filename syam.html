@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+function mouseclick()
+{
+document.getElementById("s").style.background="yellow";
+}
+function mousedbclick()
+{
+document.getElementById("syam").style.background="red";
+document.getElementById("syam").style.color="white";
+}
+function mousedown()
+{
+document.getElementById("kumar").style.color="red";
+}
+function mouseup()
+{
+document.getElementById("kumar").style.color="blue";
+}
+function mouseout(i)
+{
+i.style.width="100px";
+i.style.height="10px";
+}
+function mouseover(i)
+{
+i.style.width="500px";
+i.style.height="500px";
+}
+function mouseout2()
+{
+document.getElementById("sky").innerHTML="";
+}
+function mousemove(e)
+{
+var x=e.clientX;
+var y=e.clientY;
+document.getElementById("sky").innerHTML="coordinates of snap:"+x+" & "+y;
+
+
+}
+function mousewheel()
+{
+document.getElementById("gsk").style.fonySize="4000px";
+document.getElementById("gsk").style.border="20px solid cyan";
+}
+</script>
+<title>working with mouse events </title>
+</head>
+<body>
+<h3> Mouse events</h3>
+<button id="s" onclick="mouseclick()">click here</button>
+<p id="syam" ondblclick="mousedbclick()">please double click here</p>
+<p id="kumar" onmousedown="mousedown()" onmouseup="mouseup()">
+my name is syam kumar</p>
+<img src="E:\CP lab\idiot.jpg" style="border:2px solid red" width="250" height="250" onmouseover="mouseover(this)" onmouseout="mouseout(this)" onmousemove="mousemove(event)" onmouseout="mouseout2()">
+<p id="sky"> for zooming</p>
+<p id="gsk" onmousewheel="mousewheel()"> The Bapatla
+Engineering College(Autonomous) one of the seven educational institutions
+sponsored by the Bapatla Education Society, was established in 1981 with a
+vision to impart quality technical education and is affiliated to Acharya
+Nagarjuna University. The College is a little away from the din and bustle of
+Bapatla, a town with a historic and hoary past, about 75 Km. south of
+Vijayawada on Chennai-Vijayawada rail route. </p>
+</body>
+</html>
